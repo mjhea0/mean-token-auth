@@ -31,7 +31,6 @@ app.use(express.static(path.join(__dirname, '../client')));
 // *** mongoose ** //
 mongoose.connect(config.MONGO_URI);
 
-
 // *** main routes *** //
 app.use('/', mainRoutes);
 app.use('/auth', authRoutes);
