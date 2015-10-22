@@ -1,4 +1,4 @@
-app.controller('navbarCtrl', function($scope, $rootScope, $window, $auth) {
+app.controller('navbarCtrl', function($scope, $window, $auth) {
 
   $scope.isAuthenticated = function() {
     return $auth.isAuthenticated();
