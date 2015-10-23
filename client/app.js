@@ -22,6 +22,10 @@ app.config(function($routeProvider, $authProvider, $locationProvider) {
       templateUrl: 'partials/signup.html',
       controller: 'signupCtrl'
     })
+    .when('/profile', {
+      templateUrl: 'partials/profile.html',
+      controller: 'profileCtrl'
+    })
     .otherwise('/');
 
 });

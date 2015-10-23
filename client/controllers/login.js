@@ -11,7 +11,7 @@ app.controller('loginCtrl', function($scope, $auth, $rootScope, $window, $locati
       .then(function(response) {
         console.log(response);
         $window.localStorage.currentUser = JSON.stringify(response.data.user);
-        $rootScope.currentUser = JSON.parse($window.localStorage.currentUser);
+        $rootScope.currentUser = JSON.parse(localStorage.getItem('currentUser'));
         $location.path('/home');
       })
       .catch(function(response) {
