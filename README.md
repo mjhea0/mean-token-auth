@@ -10,7 +10,7 @@
 
 ### How do you set up email and/or password reset?
 
-**Steps:**
+#### Steps
 
 1. Client-side
   - Add the forms to the *profile.html* template.
@@ -22,5 +22,12 @@
 1. Client-side
   - Handle the returned response appropriately - update the DOM, update localstorage, flash a message to the user, etc.
 
-**Solution:** https://github.com/mjhea0/mean-token-auth/commit/e6e6e5c713c72602cabeae00bf573453d5253210
+#### Solution
+
+https://github.com/mjhea0/mean-token-auth/commit/e6e6e5c713c72602cabeae00bf573453d5253210
+
+#### Issues
+
+1. The updated email does not have to be unique. How can you update this to check the DB for emails and ensure the new email is unique? On that note, should you even allow users to update emails?
+1. No tests.
 
