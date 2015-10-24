@@ -22,4 +22,5 @@
 1. Client-side
   - Handle the returned response appropriately - update the DOM, update localstorage, flash a message to the user, etc.
 
-**Solution:**
+**Solution:** https://github.com/mjhea0/mean-token-auth/commit/e6e6e5c713c72602cabeae00bf573453d5253210
+
