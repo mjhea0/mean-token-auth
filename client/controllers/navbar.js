@@ -1,4 +1,4 @@
-app.controller('navbarCtrl', function($scope, $window, $auth) {
+app.controller('navbarCtrl', function($scope, $window, $auth, $location) {
 
   $scope.isAuthenticated = function() {
     return $auth.isAuthenticated();
@@ -7,6 +7,7 @@ app.controller('navbarCtrl', function($scope, $window, $auth) {
   $scope.logout = function() {
     $auth.logout();
     delete $window.localStorage.currentUser;
+    $location.path('/');
   };
 
 });

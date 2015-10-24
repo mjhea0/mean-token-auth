@@ -8,11 +8,13 @@
 
 ## Questions
 
-### How do you set up email and/or a password reset?
+### How do you set up email and/or password reset?
+
+**Steps:**
 
 1. Client-side
   - Add the forms to the *profile.html* template.
-  - Add a function to the controller to handle the form submission and sends a PUT request to the backend with the updated user info.
+  - Add a function to the controller to handle the form submission that sends a PUT request to the server with the updated user info.
 1. Server-side
   - Add a route to handle the PUT request. *Make sure that this can only be accessed if a user is authenticated.*
   - Grab the payload from the request body and update the document in the database.
@@ -20,3 +22,4 @@
 1. Client-side
   - Handle the returned response appropriately - update the DOM, update localstorage, flash a message to the user, etc.
 
+**Solution:**

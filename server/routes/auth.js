@@ -99,4 +99,24 @@ router.post('/login', function(req, res) {
   });
 });
 
+// *** update user route *** //
+router.put('/update', ensureAuthenticated, function(req, res) {
+  User.findOne({_id: req.body._id}, function(err, user) {
+    if (!user) {
+      return res.status(401).send({
+        message: {
+          email: 'Incorrect email'
+        }
+      });
+    }
+    if (req.body.password) {
+      user.password = req.body.password;
+    }
+    user.email = req.body.email;
+    user.save(function() {
+      res.send(user);
+    });
+  });
+});
+
 module.exports = router;
